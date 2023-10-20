@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Student_Assistant.View.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Student_Assistant.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="AliceBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button
+            Background="LightYellow"
+            Command="{Binding FeedBackCommand}" Content="Feedback"  VerticalAlignment="Center"  HorizontalAlignment="Center" Height="200" Width="200"/>
+        <Button 
+            Background="LightYellow"
+            Command="{Binding MapCommand}" Grid.Column="1" Content="Map" VerticalAlignment="Center"  HorizontalAlignment="Center" Height="200" Width="200"/>
+        <Button
+            Background="BlueViolet"
+            Content="Admin"
+            Width="100"
+            Height="50"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Margin="0 0 10 20"
+            Command="{Binding AdminCommand}"
+            />
+        <Button
+            Content="Close"
+            Width="100"
+            Height="50"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="10 0 0 20"
+            Background="Red"
+            Command="{Binding CloseCommand}"
+            />
+    </Grid>
+</UserControl>
